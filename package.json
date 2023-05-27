@@ -1,13 +1,13 @@
 {
-  "name": "helioslauncher",
+  "name": "Notre-Launcher",
   "version": "2.0.4",
-  "productName": "Helios Launcher",
-  "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "productName": "Notre Launcher",
+  "description": "Notre Serveur Launcher",
+  "author": "Mr.Patates",
   "license": "UNLICENSED",
   "homepage": "https://github.com/dscalzi/HeliosLauncher",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+   "url": "https://github.com/dscalzi/HeliosLauncher/issues"
   },
   "private": true,
   "main": "index.js",

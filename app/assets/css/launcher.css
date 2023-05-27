@@ -3958,11 +3958,11 @@ input:checked + .toggleSwitchSlider:before {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 
 /* Class which is applied when the spinner image is spinning. */
 .rotating {
-    animation: rotating 10s linear infinite;
+    animation: rotating 1.75s linear infinite;
 }
