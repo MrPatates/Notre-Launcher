@@ -3135,7 +3135,15 @@ input:checked + .toggleSwitchSlider:before {
     opacity: 1;
     transition-delay:0s;
 }
-
+/*/////////////////////////////////////////*/
+#mapSVG:hover,
+#mapURL:focus #mapSVG {
+    fill: #eef3ef;
+}
+#mapSVG:active {
+    fill: #eef3ef;
+}
+/*/////////////////////////////////////////*/
 /* Twitter icon colors. */
 #twitterSVG:hover,
 #twitterURL:focus #twitterSVG {

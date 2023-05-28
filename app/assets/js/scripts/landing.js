@@ -125,7 +125,7 @@ document.getElementById('launch_button').addEventListener('click', async e => {
         }
     } catch(err) {
         loggerLanding.error('Unhandled error in during launch process.', err)
-        showLaunchFailure('Error During Launch', 'See console (CTRL + Shift + i) for more details.')
+        showLaunchFailure('Erreur pendant le lancement', 'Voir la console (CTRL + Shift + i) pour plus de détails.')
     }
 })
 
@@ -494,12 +494,12 @@ async function dlAsync(login = true) {
 
     fullRepairModule.childProcess.on('error', (err) => {
         loggerLaunchSuite.error('Error during launch', err)
-        showLaunchFailure('Error During Launch', err.message || 'See console (CTRL + Shift + i) for more details.')
+        showLaunchFailure('Erreur lors du lancement', err.message || 'Voir la console (CTRL + Shift + i) pour plus de détails..')
     })
     fullRepairModule.childProcess.on('close', (code, _signal) => {
         if(code !== 0){
             loggerLaunchSuite.error(`Full Repair Module exited with code ${code}, assuming error.`)
-            showLaunchFailure('Error During Launch', 'See console (CTRL + Shift + i) for more details.')
+            showLaunchFailure('Erreur lors du lancement', 'Voir la console (CTRL + Shift + i) pour plus de détails.')
         }
     })
 
@@ -513,7 +513,7 @@ async function dlAsync(login = true) {
         setLaunchPercentage(100)
     } catch (err) {
         loggerLaunchSuite.error('Error during file validation.')
-        showLaunchFailure('Error During File Verification', err.displayable || 'See console (CTRL + Shift + i) for more details.')
+        showLaunchFailure('Error During File Verification', err.displayable || 'Voir la console (CTRL + Shift + i) pour plus de détails.')
         return
     }
     
@@ -529,7 +529,7 @@ async function dlAsync(login = true) {
             setDownloadPercentage(100)
         } catch(err) {
             loggerLaunchSuite.error('Error during file download.')
-            showLaunchFailure('Error During File Download', err.displayable || 'See console (CTRL + Shift + i) for more details.')
+            showLaunchFailure('Erreur lors du téléchargement d\'un fichier', err.displayable || 'Voir la console (CTRL + Shift + i) pour plus de détails.')
             return
         }
     } else {
@@ -604,7 +604,7 @@ async function dlAsync(login = true) {
             data = data.trim()
             if(data.indexOf('Could not find or load main class net.minecraft.launchwrapper.Launch') > -1){
                 loggerLaunchSuite.error('Game launch failed, LaunchWrapper was not downloaded properly.')
-                showLaunchFailure('Error During Launch', 'The main file, LaunchWrapper, failed to download properly. As a result, the game cannot launch.<br><br>To fix this issue, temporarily turn off your antivirus software and launch the game again.<br><br>If you have time, please <a href="https://github.com/dscalzi/HeliosLauncher/issues">submit an issue</a> and let us know what antivirus software you use. We\'ll contact them and try to straighten things out.')
+                showLaunchFailure('Erreur lors du lancement', 'The main file, LaunchWrapper, failed to download properly. As a result, the game cannot launch.<br><br>To fix this issue, temporarily turn off your antivirus software and launch the game again.<br><br>If you have time, please <a href="https://github.com/dscalzi/HeliosLauncher/issues">submit an issue</a> and let us know what antivirus software you use. We\'ll contact them and try to straighten things out.')
             }
         }
 
@@ -633,7 +633,7 @@ async function dlAsync(login = true) {
         } catch(err) {
 
             loggerLaunchSuite.error('Error during launch', err)
-            showLaunchFailure('Error During Launch', 'Please check the console (CTRL + Shift + i) for more details.')
+            showLaunchFailure('Erreur lors du lancement', 'Voir la console (CTRL + Shift + i) pour plus de détails.')
 
         }
     }
@@ -955,7 +955,7 @@ function displayArticle(articleObject, index){
             text.style.display = text.style.display === 'block' ? 'none' : 'block'
         }
     })
-    newsNavigationStatus.innerHTML = index + ' of ' + newsArr.length
+    newsNavigationStatus.innerHTML = index + ' sur ' + newsArr.length
     newsContent.setAttribute('article', index-1)
 }
 
@@ -986,7 +986,7 @@ async function loadNews(){
                     const el = $(items[i])
 
                     // Resolve date.
-                    const date = new Date(el.find('pubDate').text()).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'})
+                    const date = new Date(el.find('pubDate').text()).toLocaleDateString('en-FR', {month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'})
 
                     // Resolve comments.
                     let comments = el.find('slash\\:comments').text() || '0'
