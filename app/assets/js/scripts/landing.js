@@ -317,13 +317,13 @@ async function asyncSystemScan(effectiveJavaOptions, launchAfter = true){
         // If the result is null, no valid Java installation was found.
         // Show this information to the user.
         setOverlayContent(
-            'No Compatible<br>Java Installation Found',
-            `In order to join WesterosCraft, you need a 64-bit installation of Java ${effectiveJavaOptions.suggestedMajor}. Would you like us to install a copy?`,
-            'Install Java',
-            'Install Manually'
+            'Aucune installation compatible<br>Java n\'a été trouvée',
+            `Afin de rejoindre Nos Serveur, vous avez besoin d'une installation 64-bit de Java. ${effectiveJavaOptions.suggestedMajor}. Voulez-vous que nous installions pour vous ?`,
+            'Installer Java',
+            'Installer manuellement'
         )
         setOverlayHandler(() => {
-            setLaunchDetails('Preparing Java Download..')
+            setLaunchDetails('Préparation du téléchargement de Java..')
             toggleOverlay(false)
             
             try {
