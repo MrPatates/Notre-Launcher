@@ -330,17 +330,17 @@ async function asyncSystemScan(effectiveJavaOptions, launchAfter = true){
                 downloadJava(effectiveJavaOptions, launchAfter)
             } catch(err) {
                 loggerLanding.error('Unhandled error in Java Download', err)
-                showLaunchFailure('Error During Java Download', 'See console (CTRL + Shift + i) for more details.')
+                showLaunchFailure('Erreur lors du téléchargement de Java', 'Voir la console (CTRL + Shift + i) pour plus de détails.')
             }
         })
         setDismissHandler(() => {
             $('#overlayContent').fadeOut(250, () => {
                 //$('#overlayDismiss').toggle(false)
                 setOverlayContent(
-                    'Java is Required<br>to Launch',
-                    `A valid x64 installation of Java ${effectiveJavaOptions.suggestedMajor} is required to launch.<br><br>Please refer to our <a href="https://github.com/dscalzi/HeliosLauncher/wiki/Java-Management#manually-installing-a-valid-version-of-java">Java Management Guide</a> for instructions on how to manually install Java.`,
-                    'I Understand',
-                    'Go Back'
+                    'Java est nécessaire<br>pour lancer',
+                    `Une installation x64 valide de Java ${effectiveJavaOptions.suggestedMajor} est requise pour le lancement.<br><br>Veuillez vous référer à nos <a href="https://github.com/dscalzi/HeliosLauncher/wiki/Java-Management#manually-installing-a-valid-version-of-java">Guide de gestion de Java</a> pour savoir comment installer manuellement Java.`,
+                    'Je comprends',
+                    'Revenir en arrière'
                 )
                 setOverlayHandler(() => {
                     toggleLaunchArea(false)
@@ -740,7 +740,7 @@ let newsLoadingListener = null
  */
 function setNewsLoading(val){
     if(val){
-        const nLStr = 'Checking for News'
+        const nLStr = 'Vérification des l\'actualités'
         let dotStr = '..'
         nELoadSpan.innerHTML = nLStr + dotStr
         newsLoadingListener = setInterval(() => {
