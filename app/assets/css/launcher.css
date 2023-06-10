@@ -3163,6 +3163,15 @@ input:checked + .toggleSwitchSlider:before {
     fill: url('#instaFill')
 }
 
+/* Map icon colors. */
+#mapSVG:hover,
+#mapURL:focus #mapSVG {
+    fill: rgb(94, 255, 0);
+}
+#mapSVG:active {
+    fill: rgb(88, 238, 2);
+}
+
 /* Youtube icon colors. */
 #youtubeSVG:hover,
 #youtubeURL:focus #youtubeSVG {
