@@ -48,9 +48,9 @@ Vous pouvez télécharger depuis [GitHub Releases](https://github.com/dscalzi/He
 #### Dernière pré-version
 [ ![](https://img.shields.io/github/release/dscalzi/HeliosLauncher/all.svg?style=flat-square)](https://github.com/dscalzi/HeliosLauncher/releases)
 
-**Supported Platforms**
+**Plates-formes prises en charge**
 
-If you download from the [Releases](https://github.com/dscalzi/HeliosLauncher/releases) tab, select the installer for your system.
+Si vous téléchargez à partir de l'onglet [Releases] (https://github.com/dscalzi/HeliosLauncher/releases), sélectionnez le programme d'installation correspondant à votre système.
 
 | Platform | File |
 | -------- | ---- |
