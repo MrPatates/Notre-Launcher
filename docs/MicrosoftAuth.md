@@ -1,30 +1,30 @@
-# Microsoft Authentication
+# Authentification Microsoft
 
-Authenticating with Microsoft is fully supported by Helios Launcher.
+L'authentification par Microsoft est entièrement prise en charge par Helios Launcher.
 
-## Acquiring an Azure Client ID
+## Acquisition d'un identifiant client Azure
 
-1. Navigate to https://portal.azure.com
-2. In the search bar, search for **Azure Active Directory**.
-3. In Azure Active Directory, go to **App Registrations** on the left pane (Under *Manage*).
-4. Click **New Registration**.
-    - Set **Name** to be your launcher's name.
-    - Set **Supported account types** to *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*
-    - Leave **Redirect URI** blank.
-    - Register the application.
-5. You should be on the application's management page. If not, Navigate back to **App Registrations**. Select the application you just registered.
-6. Click **Authentication** on the left pane (Under *Manage*).
-7. Click **Add Platform**.
-    - Select **Mobile and desktop applications**.
-    - Choose `https://login.microsoftonline.com/common/oauth2/nativeclient` as the **Redirect URI**.
-    - Select **Configure** to finish adding the platform.
-8. Navigate back to **Overview**.
-9. Copy **Application (client) ID**.
+1. Naviguez jusqu'à https://portal.azure.com
+2. Dans la barre de recherche, recherchez **Azure Active Directory**.
+3. Dans Azure Active Directory, allez à **App Registrations** dans le panneau de gauche (sous *Manage*).
+4. Cliquez sur **New Registration** (Nouvel enregistrement).
+    - Définissez **Name** comme étant le nom de votre lanceur.
+    - Définissez **Types de comptes pris en charge** sur *Comptes dans n'importe quel répertoire organisationnel (n'importe quel répertoire Azure AD - Multitenant) et comptes Microsoft personnels (par ex. Skype, Xbox)*.
+    - Laissez **Redirect URI** vide.
+    - Enregistrez l'application.
+5. Vous devriez être sur la page de gestion de l'application. Si ce n'est pas le cas, retournez à **App Registrations**. Sélectionnez l'application que vous venez d'enregistrer.
+6. Cliquez sur **Authentication** dans le volet de gauche (sous *Gestion*).
+7. Cliquez sur **Ajouter une plateforme**.
+    - Sélectionnez **Applications mobiles et de bureau**.
+    - Choisissez `https://login.microsoftonline.com/common/oauth2/nativeclient` comme **Redirect URI**.
+    - Sélectionnez **Configurer** pour terminer l'ajout de la plateforme.
+8. Retournez à **Overview**.
+9. Copiez **Identification de l'application (client)**.
 
 
-Reference: https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
+Référence: https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
-## Adding the Azure Client ID to Helios Launcher.
+## Ajout de l'identifiant du client Azure à Notre Launcher.
 
 In `app/assets/js/ipcconstants.js` you'll find **`AZURE_CLIENT_ID`**. Set it to your application's id.
 
